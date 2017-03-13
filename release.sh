@@ -2,13 +2,14 @@
 
 set -e
 
-#TAGS=(emqttd emq-modules emq-dashboard emq-retainer emqrecon emq-reloader emq-auth-clientid emq-auth-username emq-auth-ldap emq-auth-http emq-auth-mysql emq-auth-pgsql emq-auth-redis emq-auth-mongo emq-sn emq-coap emq-stomp emq-plugin-template)
+TAGS=(emqttd emq-modules emq-dashboard emq-retainer emq-recon emq-reloader emq-auth-clientid emq-auth-username emq-auth-ldap emq-auth-http emq-auth-mysql emq-auth-pgsql emq-auth-redis emq-auth-mongo)
 
-TAGS=(HelloV)
+#TAGS=(HelloV)
 TEMP_GITHUB_REPO=tmp_tags
-GITHUB_USER=huangdan
+GITHUB_USER=emqtt
+mkdir $TEMP_GITHUB_REPO
 for tag in ${TAGS[@]} ; do \
-    mkdir $TEMP_GITHUB_REPO; \
+    cd /Users/huangdan/testTools/HelloV
     GIT_REPO="git@github.com:"${GITHUB_USER}"/"${tag}".git"
     echo $GIT_REPO
     echo $1
