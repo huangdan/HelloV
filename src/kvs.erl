@@ -1,4 +1,4 @@
--module(kvs).
+-module(kvs1111).
 
 -export([start/0, store/2, lookup/1]).
 
